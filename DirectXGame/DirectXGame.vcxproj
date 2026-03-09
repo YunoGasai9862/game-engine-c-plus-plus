@@ -133,7 +133,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DX3D\Source\DX3D\Core\Base.cpp" />
-    <ClCompile Include="DX3D\Source\DX3D\Window\Win32\Win32Window.cpp" />
+    <ClCompile Include="DX3D\Source\DX3D\Window\Win32\Win32Window.cpp">
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
     <ClCompile Include="Game\main.cpp" />
   </ItemGroup>
   <ItemGroup>
