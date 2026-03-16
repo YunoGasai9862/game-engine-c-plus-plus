@@ -9,5 +9,8 @@ namespace dx3d
 
 		//the compiler can ensure the correct function is being overridden
 		virtual ~Window() override;
+
+	private:
+		void* m_handle{};
 	};
 }
