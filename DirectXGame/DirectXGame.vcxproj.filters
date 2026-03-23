@@ -24,6 +24,12 @@
     <ClCompile Include="DX3D\Source\DX3D\Window\Win32\Win32Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DX3D\Source\DX3D\Game\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DX3D\Source\DX3D\Game\Win32\Win32Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DirectXGame.rc">
@@ -41,6 +47,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DX3D\Include\DX3D\Window\Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DX3D\Include\DX3D\Game\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

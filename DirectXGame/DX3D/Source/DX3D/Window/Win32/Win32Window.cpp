@@ -27,8 +27,15 @@ dx3d::Window::Window() :
 		WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU, CW_USEDEFAULT, CW_USEDEFAULT, 
 		rect.right - rect.left, rect.bottom - rect.top, NULL, NULL, NULL, NULL);
 
+	if (!m_handle) {
+		throw std::runtime_error("CreateWindowEx has encountered an unforseen exception!");
+	}
+
+	ShowWindow(static_cast<HWND>(m_handle), SW_SHOW);
+
 }
 
 dx3d::Window::~Window()
 {
+	DestroyWindow(static_cast<HWND>(m_handle));
 }
