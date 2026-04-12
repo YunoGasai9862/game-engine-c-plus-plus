@@ -8,12 +8,12 @@ namespace dx3d
 	{
 	public:
 		Game();
-		virtual ~Game() override;
+		virtual ~Game();
 
 		virtual void run() final;
 
 	private:
-		Window* m_display{};
-		bool m_isRunning{ true };
+		Window* m_display {};
+		bool m_isRunning { true };
 	};
 }
