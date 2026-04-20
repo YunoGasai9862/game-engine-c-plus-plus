@@ -2,6 +2,23 @@
 #include "DX3D/Window/Window.h"
 #include <Windows.h>
 #include <stdexcept>
+
+static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
+
+	switch (msg)
+	{
+
+	case WM_CLOSE:
+		PostQuitMessage(0);
+		break;
+
+	default:
+		return DefWindowProc(hwnd, msg, wparam, lparam);
+	}
+
+	return 0;
+}
+
 dx3d::Window::Window() :
 	Base()
 {
@@ -10,7 +27,8 @@ dx3d::Window::Window() :
 
 	wc.cbSize = sizeof(WNDCLASSEX);
 	wc.lpszClassName = L"DX3DWindow";
-	wc.lpfnWndProc = DefWindowProc; //default window procedure, we will override it later
+	wc.lpfnWndProc = &WindowProcedure; //default window procedure, we will override it later
+
 
 	ATOM windowClassId = RegisterClassEx(&wc);
 
