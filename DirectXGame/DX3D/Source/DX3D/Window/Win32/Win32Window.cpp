@@ -22,15 +22,19 @@ static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPAR
 dx3d::Window::Window() :
 	Base()
 {
-	//initialize it with default values/lazy intialization
-	WNDCLASSEX wc{};
+	auto registerWindowClassFunction = []()
+	{
+		//initialize it with default values/lazy intialization
+		WNDCLASSEX wc{};
 
-	wc.cbSize = sizeof(WNDCLASSEX);
-	wc.lpszClassName = L"DX3DWindow";
-	wc.lpfnWndProc = &WindowProcedure; //default window procedure, we will override it later
+		wc.cbSize = sizeof(WNDCLASSEX);
+		wc.lpszClassName = L"DX3DWindow";
+		wc.lpfnWndProc = &WindowProcedure; //default window procedure, we will override it later
 
+		return RegisterClassEx(&wc);
+	};
 
-	ATOM windowClassId = RegisterClassEx(&wc);
+	static const ATOM windowClassId = std::invoke(registerWindowClassFunction);
 
 
 	if (!windowClassId) {
