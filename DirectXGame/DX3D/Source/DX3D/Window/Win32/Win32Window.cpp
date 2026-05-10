@@ -1,7 +1,6 @@
 #include <DX3D/Core/Base.h>
 #include "DX3D/Window/Window.h"
 #include <Windows.h>
-#include <stdexcept>
 
 static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
 
