@@ -3,7 +3,10 @@
 #include <DX3D/Core/Base.h>
 #include <d3d11.h>
 #include <wrl.h>
-
+//Option 2 — Project settings (Visual Studio):
+//Right - click your project → Properties
+//Go to Linker → Input → Additional Dependencies
+//Add d3d11.lib to the list
 namespace dx3d
 {
 	class RenderSystem final : public Base
