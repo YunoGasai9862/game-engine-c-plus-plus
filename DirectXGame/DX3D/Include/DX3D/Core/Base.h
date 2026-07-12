@@ -1,12 +1,14 @@
 #pragma once
 #include <stdexcept>
+#include <DX3D/Core/Core.h>
+#include <DX3D/Core/Common.h>
 
 namespace dx3d
 {
 	class Base
 	{
 	public:
-		Base();
+		explicit Base(const BaseDesc& desc);
 		virtual ~Base();
 
 	protected:
@@ -14,6 +16,9 @@ namespace dx3d
 		Base(Base&&) = delete;
 		Base& operator = (const Base&) = delete;
 		Base& operator = (Base&&) = delete;
+
+	protected:
+		Logger& m_logger;
 	};
 }
 

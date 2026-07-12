@@ -5,7 +5,7 @@
 
 dx3d::Game::Game()
 {
-	m_loggerPtr = std::make_unique<Logger>();
+	m_loggerPtr = std::make_unique<Logger>(Logger::LogLevel::Info);
 	m_graphicsEngine = std::make_unique<GraphicsEngine>();
 	m_display = std::make_unique<Window>();
 
@@ -15,4 +15,5 @@ dx3d::Game::Game()
 
 dx3d::Game::~Game()
 {
+	m_loggerPtr->log(Logger::LogLevel::Info, "Game deallocation started.");
 }

@@ -2,7 +2,10 @@
 #include <iostream>
 
 dx3d::Logger::Logger(LogLevel logLevel): m_logLevel(logLevel)
-{}
+{
+	std::clog << "YunoGasai | C++ 3D Game Tutorial Practice" << "\n";
+	std::clog << "------------------<3--------------------" << "\n";
+}
 
 void dx3d::Logger::log(LogLevel level, const char* message) const
 {
