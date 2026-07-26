@@ -8,4 +8,19 @@ namespace dx3d
 	{
 		Logger& logger;
 	};
+
+	struct WindowDesc
+	{
+		BaseDesc baseDesc;
+	};
+
+	struct GraphicsEngineDesc
+	{
+		BaseDesc baseDesc;
+	};
+
+	struct RenderSystemDesc
+	{
+		BaseDesc baseDesc;
+	};
 }
