@@ -1,6 +1,6 @@
 #include <DX3D/Graphics/RenderSystem.h>
 
-dx3d::RenderSystem::RenderSystem()
+dx3d::RenderSystem::RenderSystem(const RenderSystemDesc& desc) : dx3d::Base(desc.baseDesc)
 {
 	D3D_FEATURE_LEVEL featureLevel{};
 	UINT createDeviceFlags{};
