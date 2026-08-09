@@ -1,9 +1,10 @@
 #pragma once
+#include <DX3D/Core/Base.h>
 #include <DX3D/Core/Core.h>
 
 namespace dx3d
 {
-	class Game
+	class Game : public Base
 	{
 	public:
 		Game();

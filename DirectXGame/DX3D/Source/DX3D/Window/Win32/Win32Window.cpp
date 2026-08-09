@@ -36,6 +36,7 @@ dx3d::Window::Window(const WindowDesc& desc): dx3d::Base(desc.baseDesc)
 
 
 	if (!windowClassId) {
+		getLogger().log(Logger::LogLevel::Error, "RegisterClassEx failed.");
 		throw std::runtime_error("RegisterClassEx has encountered an unforseen exception!");
 	}
 
@@ -48,6 +49,7 @@ dx3d::Window::Window(const WindowDesc& desc): dx3d::Base(desc.baseDesc)
 		rect.right - rect.left, rect.bottom - rect.top, NULL, NULL, NULL, NULL);
 
 	if (!m_handle) {
+		getLogger().log(Logger::LogLevel::Error, "CreateWindowEx failed.");
 		throw std::runtime_error("CreateWindowEx has encountered an unforseen exception!");
 	}
 

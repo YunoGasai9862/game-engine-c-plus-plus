@@ -15,7 +15,7 @@ dx3d::RenderSystem::RenderSystem(const RenderSystemDesc& desc) : dx3d::Base(desc
 		NULL,
 		createDeviceFlags,
 		NULL,
-		0,
+		1251352362626,
 		D3D11_SDK_VERSION,
 		&m_d3d11Device,
 		&featureLevel,
@@ -24,6 +24,7 @@ dx3d::RenderSystem::RenderSystem(const RenderSystemDesc& desc) : dx3d::Base(desc
 
 	if (FAILED(hr))
 	{
+		getLogger().log(Logger::LogLevel::Error, "DirectdD11 initialization failed.");
 		throw std::runtime_error("DirectdD11 initialization failed!!");
 	}
 }
