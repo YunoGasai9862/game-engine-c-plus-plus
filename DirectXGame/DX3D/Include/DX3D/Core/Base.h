@@ -1,6 +1,5 @@
 #pragma once
 #include <DX3D/Core/Common.h>
-#include <stdexcept>
 
 namespace dx3d
 {

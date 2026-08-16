@@ -30,4 +30,5 @@ dx3d::RenderSystem::RenderSystem(const RenderSystemDesc& desc) : dx3d::Base(desc
 }
 
 dx3d::RenderSystem::~RenderSystem()
-{}
+{
+}

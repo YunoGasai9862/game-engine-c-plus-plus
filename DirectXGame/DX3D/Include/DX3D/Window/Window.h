@@ -4,12 +4,10 @@
 
 namespace dx3d
 {
-	class Window: public dx3d::Base
+	class Window: public Base
 	{
 	public:
 		explicit Window(const WindowDesc& desc);
-		Window();
-
 		//the compiler can ensure the correct function is being overridden
 		virtual ~Window() override;
 
